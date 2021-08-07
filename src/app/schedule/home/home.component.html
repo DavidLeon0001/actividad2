@@ -1,9 +1,36 @@
 <div class="container">
+  
     <div class="section">
         <app-panel padding="narrow">
-        </app-panel>
+          <h4>TAREAS SIN <br>CATALOGAR</h4> 
+            <div style="margin-top: 25px" *ngFor="let task of tasks">
+              <app-bullet
+                [displayText]="task.displayText"
+                [status]="task.status"
+                (onClick)="setSelectedTask(task)"
+              ></app-bullet>
+            </div>
+            
+        </app-panel>       
     </div>
+  </div>
+  <div class="container2">
   
+    <div class="section3">
+       
+       
+            <div style="display:inline-block;margin-top: 25px;margin-right: 50px;" *ngFor="let task of tasks">
+              <app-panel>
+                <app-bullet
+                [displayText]="task.displayText"
+                [status]="task.status"
+                (onClick)="setSelectedTask(task)"
+              ></app-bullet>
+              </app-panel>
+            </div>
+            
+           
+    </div>
   </div>
 
   <div class="container">
@@ -11,6 +38,11 @@
         <div class="col">
          <div class="section2">
              <app-panel padding="narrow">
+                  <label for="">Titulo</label>
+                  <input id="task-title1" type="text" [(ngModel)]="titulo1"/>
+                  <div class="break"></div>
+                  <app-button (onClick)="onClick1()">
+                    <strong>Agregar nueva tarea</strong> </app-button>
              </app-panel>
            </div>
         </div>
@@ -19,6 +51,11 @@
      <div class="col">
       <div class="section2">
           <app-panel padding="narrow">
+            <label for="">Titulo</label>
+            <input id="task-title2" type="text" [(ngModel)]="titulo2"/>
+            <div class="break"></div>
+            <app-button (onClick)="onClick2()">
+              <strong>Agregar nueva columna</strong> </app-button>
           </app-panel>
         </div>
      </div>

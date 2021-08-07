@@ -4,16 +4,30 @@
     justify-content: right;
   }
   
+  .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+  }
   .section {
     margin: 25px;
     height: 400px;
-    width: 800px;
+    width: 1200px;
   }
   
   .section2{
     margin: 25px;
-    height: 300px;
-    width: 200px;
+    height: 100px;
+    width: 250px;
+  }
+  .section3{
+    margin:25px;
+    height: 400px;
+    width: 200x;
+    padding-left: 275px,;
+    position: absolute;
+    left: 0px;
+    top: 7px;
   }
   .break {
     flex-basis: 100%;

@@ -1,0 +1,19 @@
+<div class="bullet" [ngStyle]="{'border': getBorder()}" (click)="internalClick()" >
+  <div class="row">
+    <div class="col">
+    <div>
+      {{displayText}}
+    </div>
+  </div> 
+  <div class="col">    
+      <label>Estado</label>
+      <select [(ngModel)]="estado">
+        <option value="done">Hecho</option>
+        <option value="onGoing">En Curso</option>
+        <option value="pending">Pendiente</option>
+      </select>
+    
+    </div>
+</div>
+   
+  </div>
